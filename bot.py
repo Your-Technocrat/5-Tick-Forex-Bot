@@ -55,7 +55,7 @@ async def run_schedule():
 
 def schedule_news():
     # Schedule the news fetching every 5 minutes (instead of 30)
-    schedule.every(5).minutes.do(lambda: asyncio.create_task(fetch_single_trading_news()))
+    schedule.every(2).hours.do(lambda: asyncio.create_task(fetch_single_trading_news()))
 
 if __name__ == "__main__":
     # Start scheduling news fetching
